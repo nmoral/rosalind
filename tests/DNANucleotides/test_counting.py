@@ -1,4 +1,4 @@
-def test_pytest_running() -> None:
+def test_counting() -> None:
     from rosalind.dna_nucleotides.counting import counting
 
     # Test de santé minimal pour vérifier que pytest s'exécute
