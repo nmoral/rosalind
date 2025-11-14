@@ -3,8 +3,8 @@ def test_counting() -> None:
 
     # Test de santé minimal pour vérifier que pytest s'exécute
     assert (
-        counting("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
+        counting(b"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
         == "20 12 17 21"
     )
-    assert counting("A") == "1 0 0 0"
-    assert counting("CCGGTT") == "0 2 2 2"
+    assert counting(b"A") == "1 0 0 0"
+    assert counting(b"CCGGTT") == "0 2 2 2"

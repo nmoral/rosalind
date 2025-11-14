@@ -1,4 +1,4 @@
-def counting(dna: str) -> str:
+def counting(dna: bytes) -> str:
     """Retourne le comptage attendu des nucléotides pour le test de sanity.
 
     Nota: Ce kata évoluera probablement ensuite pour calculer à partir d'une
@@ -6,9 +6,19 @@ def counting(dna: str) -> str:
     par le test minimal.
     """
 
-    compte: dict[str, int] = {}
+    count = do_counting(dna)
+
+    return (
+        f"{count.get(ord('A'), 0)} "
+        f"{count.get(ord('C'), 0)} "
+        f"{count.get(ord('G'), 0)} "
+        f"{count.get(ord('T'), 0)}"
+    )
+
+
+def do_counting(dna: bytes) -> dict[int, int]:
+    count: dict[int, int] = {}
 
     for n in dna:
-        compte[n] = compte.get(n, 0) + 1
-
-    return f"{compte.get('A', 0)} {compte.get('C', 0)} {compte.get('G', 0)} {compte.get('T', 0)}"
+        count[n] = count.get(n, 0) + 1
+    return count
