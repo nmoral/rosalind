@@ -40,7 +40,7 @@ pre-commit:
 	pre-commit install
 
 ## check: Pack tout: lint, types, tests
-check: lint type test
+check: format lint type test
 
 ## pip-upgrade: Met à jour pip/setuptools/wheel dans l'environnement actif
 pip-upgrade:
