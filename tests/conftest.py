@@ -3,9 +3,9 @@ import sys
 
 
 def _ensure_src_on_path() -> None:
-    """Ajoute le dossier 'src' au sys.path pour permettre `import rosalind` en dev.
+    """Add 'src' folder to sys.path to allow `import rosalind` in dev mode.
 
-    Évite d'avoir à installer le package en mode editable pendant le développement.
+    Avoids having to install the package in editable mode during development.
     """
 
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

@@ -1,4 +1,8 @@
+"""Tests for counting point mutations (Hamming distance) (HAMM)."""
+
+
 def test_counting_mutations() -> None:
+    """Verify Hamming distance across multiple scenarios."""
     from rosalind.dna_nucleotides.counting_mutation import counting_mutations
 
     assert (
@@ -46,5 +50,5 @@ def test_counting_mutations() -> None:
             b"ATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGCATGC",
             b"ATGCATGCATCCATGCATGGATGCATGCATGCCTGCATGCATGCATGCAGGCATGCATGCATGCATGGATGCATGCTTGCATGCATGCATGCATGC",
         )
-        == 66
+        == 6
     )

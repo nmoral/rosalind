@@ -1,4 +1,8 @@
-def test_counting() -> None:
+"""Tests for the Fibonacci Rabbits problem (FIB)."""
+
+
+def test_fibonacci() -> None:
+    """Validate modified Fibonacci results for several inputs."""
     from rosalind.dna_nucleotides.fibonacci import fibonacci
 
     assert fibonacci(5, 3) == 19

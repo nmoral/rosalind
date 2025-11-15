@@ -1,11 +1,26 @@
 def fibonacci(n: int, k: int) -> int:
-    """
-    fibonacci is equal to Fn = Fn-1 + Fn-2
+    """Calculate rabbit population using modified Fibonacci sequence.
 
-    with k, fibonacci is equal to Fn = Fn-1 + k * Fn-2
+    In the Fibonacci Rabbits problem:
+    - Each generation, a mature pair produces k new pairs
+    - F(n) = F(n-1) + k * F(n-2)
+    - F(1) = F(2) = 1 (initial conditions)
 
-    1 1 4 7 19 40
-    1 1 3 5 11 21
+    Args:
+        n: Number of months (generations)
+        k: Number of pairs produced by each mature pair
+
+    Returns:
+        Total number of rabbit pairs after n months
+
+    Example:
+        >>> fibonacci(5, 3)
+        19
+        >>> fibonacci(6, 3)
+        40
+
+    Note:
+        Iterative implementation: O(n) time, O(1) space
     """
     if n <= 1:
         return 1

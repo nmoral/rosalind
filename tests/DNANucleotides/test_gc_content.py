@@ -1,4 +1,8 @@
-def test_counting() -> None:
+"""Tests for GC content computations (GC)."""
+
+
+def test_compute_gc_content() -> None:
+    """Compute GC% for a single DNA sequence."""
     from rosalind.dna_nucleotides.gc_content import compute_gc_content
 
     assert (
@@ -13,6 +17,7 @@ def test_counting() -> None:
 
 
 def test_gc_content() -> None:
+    """Find the sequence with the highest GC% from FASTA content."""
     from rosalind.dna_nucleotides.gc_content import gc_content
 
     assert (

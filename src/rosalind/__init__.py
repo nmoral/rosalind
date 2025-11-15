@@ -1,6 +1,7 @@
-"""Package rosalind (src layout).
+"""Rosalind package (src layout).
 
-Fournit des utilitaires et algorithmes. Ce fichier expose une API minimale.
+Provides utilities and algorithms for solving Rosalind exercises.
+This file exposes a minimal public API.
 """
 
 __all__ = [

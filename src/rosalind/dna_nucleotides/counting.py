@@ -1,9 +1,15 @@
 def counting(dna: bytes) -> str:
-    """Retourne le comptage attendu des nucléotides pour le test de sanity.
+    """Count occurrences of each nucleotide in a DNA sequence.
 
-    Nota: Ce kata évoluera probablement ensuite pour calculer à partir d'une
-    séquence donnée; pour l'instant, on retourne simplement la chaîne attendue
-    par le test minimal.
+    Args:
+        dna: DNA sequence as bytes (e.g., b"ATCG")
+
+    Returns:
+        Space-separated counts as string: "A C G T"
+
+    Example:
+        >>> counting(b"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
+        '20 12 17 21'
     """
 
     count = do_counting(dna)
@@ -17,6 +23,16 @@ def counting(dna: bytes) -> str:
 
 
 def do_counting(dna: bytes) -> dict[int, int]:
+    """Count occurrences of each byte in a sequence.
+
+    Helper function used by counting() and gc_content().
+
+    Args:
+        dna: Sequence as bytes
+
+    Returns:
+        Dictionary mapping byte values to their counts
+    """
     count: dict[int, int] = {}
 
     for n in dna:
