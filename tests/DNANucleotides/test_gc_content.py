@@ -14,6 +14,7 @@ def test_compute_gc_content() -> None:
         )
         < 0.001
     )
+    assert compute_gc_content(None) == 0.0
 
 
 def test_gc_content() -> None:
